@@ -8,6 +8,9 @@ const { dashboardRoute } = require("./routes/dashbord.route")
 const app = express()
 
 app.use(express.json())
+app.get("/",(req,res)=>{
+    res.send("Welcome To Flight Booking App")
+})
 app.use("/users",userRouter)
 app.use(auth)
 app.use("/flights",flightRoute)
